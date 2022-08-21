@@ -1,0 +1,23 @@
+{
+  "name": "fit-dttx-ptudw-project",
+  "version": "1.0.0",
+  "description": "Project PTUDW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmt-ht/fit-dttx-ptudw-project.git"
+  },
+  "author": "Tu Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmt-ht/fit-dttx-ptudw-project/issues"
+  },
+  "homepage": "https://github.com/nmt-ht/fit-dttx-ptudw-project#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
+  }
+}
