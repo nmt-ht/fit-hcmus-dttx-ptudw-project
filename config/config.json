@@ -4,13 +4,7 @@
     "password": "postgres",
     "database": "aromadb",
     "host": "localhost",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true,
-        "rejectUnauthorized": false
-      }
-    }
+    "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
