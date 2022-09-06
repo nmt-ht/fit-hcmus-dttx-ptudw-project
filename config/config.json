@@ -1,29 +1,35 @@
 {
-    "development": {
-        "username": "postgres",
-        "password": "postgres",
-        "database": "aromadb",
-        "host": "localhost",
-        "dialect": "postgres"
-    },
-    "test": {
-        "username": "postgres",
-        "password": "postgres",
-        "database": "aromadb",
-        "host": "localhost",
-        "dialect": "postgres"
-    },
-    "production": {
-        "username": "heroku-postgres-username",
-        "password": "heroku-postgres-password",
-        "database": "heroku-postgres-database",
-        "host": "heroku-postgres-host",
-        "dialect": "postgres",
-        "dialectOptions": {
-            "ssl": {
-                "require": true,
-                "rejectUnauthorized": false
-                }
-        }
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "aromadb",
+    "host": "localhost",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
     }
+  },
+  "test": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "aromadb",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "jvvavbfuzofqeq",
+    "password": "f2352fe0e27d47e411b7abf55730d44a1991d45ccfd7ed6bfad0280fed1465bc",
+    "database": "d7nn8msvqffeou",
+    "host": "ec2-107-23-76-12.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
 }
