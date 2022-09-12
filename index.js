@@ -6,11 +6,17 @@ let expressHbs =  require('express-handlebars');
 app.use(express.static(__dirname + '/public'));
 
 // Data view engine
+let helper = require('./controllers/helper');
+
 app.engine('hbs', expressHbs.engine({
     layoutsDir: __dirname + '/views/layouts',
     partialsDir: __dirname + "/views/partials",
     extname: 'hbs',
     defaultLayout: 'layout',
+    helpers:{
+        createStarList: helper.createStarList,
+        createStars: helper.createStars
+    },
     runtimeOptions: {
         allowProtoPropertiesByDefault: true
     }
