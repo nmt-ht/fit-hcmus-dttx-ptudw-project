@@ -7,6 +7,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Data view engine
 let helper = require('./controllers/helper');
+let paginateHelper = require('express-handlebars-paginate');
 
 app.engine('hbs', expressHbs.engine({
     layoutsDir: __dirname + '/views/layouts',
@@ -15,7 +16,8 @@ app.engine('hbs', expressHbs.engine({
     defaultLayout: 'layout',
     helpers:{
         createStarList: helper.createStarList,
-        createStars: helper.createStars
+        createStars: helper.createStars,
+        createPagination: paginateHelper.createPagination
     },
     runtimeOptions: {
         allowProtoPropertiesByDefault: true

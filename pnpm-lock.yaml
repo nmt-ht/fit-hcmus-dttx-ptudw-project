@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   express: ^4.18.1
   express-handlebars: ^6.0.6
+  express-handlebars-paginate: ^1.0.3
   pg: ^8.8.0
   pg-hstore: ^2.3.4
   sequelize: ^6.21.4
@@ -11,6 +12,7 @@ specifiers:
 dependencies:
   express: 4.18.1
   express-handlebars: 6.0.6
+  express-handlebars-paginate: 1.0.3
   pg: 8.8.0
   pg-hstore: 2.3.4
   sequelize: 6.21.4_pg-hstore@2.3.4+pg@8.8.0
@@ -302,6 +304,10 @@ packages:
     dependencies:
       d: 1.0.1
       es5-ext: 0.10.62
+    dev: false
+
+  /express-handlebars-paginate/1.0.3:
+    resolution: {integrity: sha512-dj1d8ntEfneIU+gs//7s8KYpn7w6RQxovQ0ThSqO5ziqbhhlMaGex+vQgVHqCLYxWFXNrN2EEoMmQjJS07lBgg==}
     dev: false
 
   /express-handlebars/6.0.6:
