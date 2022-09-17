@@ -30,13 +30,13 @@
       {{#each categories}}
       <div class="hero-carousel__slide">
         <img src="{{imagepath}}" alt="" class="img-fluid">
-        <a href="#" class="hero-carousel__slideOverlay">
+        <a href="/products?category={{id}}" class="hero-carousel__slideOverlay">
           <h3>{{name}}</h3>
           <p>{{summary}}</p>
         </a>
       </div>
       {{/each}}
-     
+
     </div>
   </section>
   <!--================ Hero Carousel end =================-->
@@ -51,21 +51,7 @@
       <div class="row">
         {{#each trendingProducts}}
         <div class="col-md-6 col-lg-4 col-xl-3">
-          <div class="card text-center card-product">
-            <div class="card-product__img">
-              <img class="card-img" src="{{imagepath}}" alt="">
-              <ul class="card-product__imgOverlay">
-                <li><button><i class="ti-search"></i></button></li>
-                <li><button><i class="ti-shopping-cart"></i></button></li>
-                <li><button><i class="ti-heart"></i></button></li>
-              </ul>
-            </div>
-            <div class="card-body">
-              <p>{{Category.name}}</p>
-              <h4 class="card-product__title"><a href="/products/{{id}}">{{name}}</a></h4>
-              <p class="card-product__price">${{price}}</p>
-            </div>
-          </div>
+          {{>product}}
         </div>
         {{/each}}
       </div>

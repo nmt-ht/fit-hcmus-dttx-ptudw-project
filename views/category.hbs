@@ -92,14 +92,14 @@
             </select>
           </div>
           <div>
+            <form action="/products" method="GET"></form>
             <div class="input-group filter-bar-search">
-              <form action="/products" method="GET">
-                <input type="text" placeholder="Search" name="search">
-                <div class="input-group-append">
-                  <button type="submit"><i class="ti-search"></i></button>
-                </div>
-              </form>
+              <input type="text" placeholder="Search" name="search">
+              <div class="input-group-append">
+                <button type="submit"><i class="ti-search"></i></button>
+              </div>
             </div>
+            </form>
           </div>
         </div>
         <!-- End Filter Bar -->
@@ -108,21 +108,7 @@
           <div class="row">
             {{#each products}}
             <div class="col-md-6 col-lg-4">
-              <div class="card text-center card-product">
-                <div class="card-product__img">
-                  <img class="card-img" src="{{imagepath}}" alt="">
-                  <ul class="card-product__imgOverlay">
-                    <li><button><i class="ti-search"></i></button></li>
-                    <li><button><i class="ti-shopping-cart"></i></button></li>
-                    <li><button><i class="ti-heart"></i></button></li>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <p>{{Category.name}}</p>
-                  <h4 class="card-product__title"><a href="/products/{{id}}">{{name}}</a></h4>
-                  <p class="card-product__price">${{price}}</p>
-                </div>
-              </div>
+                {{> product}}
             </div>
             {{/each}}
           </div>
@@ -303,16 +289,16 @@
   }
 
   $(document).ready(() => {
-    //Thiet lao trang thai cho cac checkbox browse and filler
+    //Thiet lap trang thai cho cac checkbox browse and filler
     let checkboxes = ['category', 'brand', 'color'];
-    for (let key in checkboxes) {
+    for (let key of checkboxes) {
       let control = $(`#${key}${urlParams.get(key)}`);
       if (control) {
         $(control).prop('checked', true);
       }
     }
 
-    //Thiet lao trang thai cho cac checkbox sort and limit
+    //Thiet lap trang thai cho cac checkbox sort and limit
     $('#sort').val(urlParams.get('sort'));
     $('#limit').val(urlParams.get('limit'));
 
