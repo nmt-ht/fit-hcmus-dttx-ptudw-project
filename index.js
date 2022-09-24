@@ -62,6 +62,7 @@ app.use((req, res, next) => {
 app.use("/", require("./routes/indexRouter"));
 app.use("/products", require("./routes/productRouter"));
 app.use("/cart", require('./routes/cartRouter'));
+app.use("/comments", require('./routes/commentRouter'));
 
 app.get("/sync", (req, res) => {
   let models = require("./models");
