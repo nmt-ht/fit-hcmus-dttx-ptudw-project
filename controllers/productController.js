@@ -122,7 +122,6 @@ controller.getById = (id) => {
           stars.push(reviews.filter((item) => item.rating == i).length);
         }
         product.stars = stars;
-
         resolve(product);
       })
       .catch((error) => reject(new Error(error)));
